@@ -1,5 +1,5 @@
 #!/bin/sh
-# 2018/05/12
+# 2018/05/13
 # remove a installed .tar.gz package
 
 METADIR="$HOME/.tgmeta"

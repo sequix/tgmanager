@@ -1,5 +1,5 @@
 #!/bin/sh
-# 2018/05/12
+# 2018/05/13
 # install a .tar.gz package.
 
 METADIR="$HOME/.tgmeta"
@@ -22,7 +22,7 @@ test -e "$prefix" || {
 }
 
 tar -tf "$1" \
-    | sed "s/^/$prefix\//g" \
+    | sed "s@^@$prefix/@g" \
     | xargs -d '\n' -n 1 readlink -m >>$meta_file
 
 tar -xf "$1" -C "$prefix"
